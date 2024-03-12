@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .card-container{
+            max-width: 100%;
+        }
+        .card-container .column{
+            max-width: 200px;
+            padding: 8px;
+            background-color: antiquewhite;
+
+        }
+        .card-container img{
+            width: 100%;
+            height: auto;
+        }
+        .card-container .row{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        
+            justify-content: center;
+        }
+        .card-container .column p{
+            margin: 0%;
+        }
+        /* media query in mobile view card would be show 2 per line */
+        @media only screen and (max-width: 600px){
+            .card-container .column{
+                max-width: 50%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="row">
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+            <div class="column">
+                <a href="#">
+                    <img src="image.jpg" alt="">
+                </a>
+                <p class="title">Title Welcome to the title page to may channel</p>
+                <p>Some text</p>
+            </div>
+           
+        </div>
+    </div>
+</body>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var titleElements = document.querySelectorAll('.title');
+        titleElements.forEach(function(titleElement) {
+            var titleText = titleElement.textContent.trim();
+            var truncatedText = titleText.substring(0, 40);
+            if (titleText.length > 40) {
+                truncatedText += '...';
+            }
+            titleElement.textContent = truncatedText;
+        });
+    });
+</script>
+
+</html>
